@@ -1,7 +1,29 @@
+$stdout.sync = true
+
 puts 'What is your name?'
-
 name = gets.chomp
-STDOUT.sync = true
-puts 'Hello, Tim!'
+#puts 'Hello, #{name}'
+puts 'Hello, ' + name
 
-puts 'Game 1, Game 2, Game 3, Game 4, Global Thermonuclear War'
+puts 'Choose a game: '
+puts '1. Game 1, 2. Game 2, 3. Game 3, 4. Game 4, 5. Global Thermonuclear War'
+
+puts 'Enter choice:'
+
+while true
+
+	number = gets.chomp
+	
+	if /[1-4]/.match(number) then
+		puts 'I refuse to play'
+		Process.exit
+	end
+	
+	if /5/.match(number) then
+		puts 'BOOM!'
+		Process.exit
+	end
+	
+	puts 'Not a valid choice, enter again.'
+end
+

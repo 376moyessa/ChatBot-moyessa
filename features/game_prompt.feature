@@ -1,27 +1,22 @@
-Feature: Display a list 'Game 1, Game 2, Game 3, Game 4, Global Thermonuclear War' and Prompt a user for a number
-In order to interact nicely
-As a friendly user
-I want to tell the app the number
-
-Scenario: Verify the list shows up
-	Given the application is running
-	Then the output should contain "Game 1, Game 2, Game 3, Game 4, Global Thermonuclear War"
-	
-	
 Feature: Prompt a user for a number
 In order to interact nicely
 As a friendly user
 I want to tell the app a number
 
-Scenario: Verify the prompt shows up and they don't select Five
+Scenario: Verify the prompt shows up
 	Given the application is running
-	Given I type "One" or "Two" or "Three" or "Four"
-	Then the output should contain "I refuse to play" and exit
+	Given I type "Steven"
+	Given I type "1"
+	Then the output should contain "1. Game 1, 2. Game 2, 3. Game 3, 4. Game 4, 5. Global Thermonuclear War"
 	
-Scenario: Verify the prompt shows up and they select Five
+Scenario: Prompt the user for number
 	Given the application is running
-	Given I type "Five"
-	Then the output should contain "BOOM!" and exit
+	When I type "Steven"
+	When I type "1"
+	Then the output should contain "I refuse to play"	
 	
-
-	
+Scenario: Prompt the user for number
+	Given the application is running
+	When I type "Steven"
+	When I type "5"
+	Then the output should contain "BOOM!"
