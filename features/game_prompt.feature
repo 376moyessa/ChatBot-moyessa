@@ -14,7 +14,25 @@ Scenario: Prompt the user for number
 	When I type "Steven"
 	When I type "1"
 	Then the output should contain "I refuse to play"	
+
+Scenario: Prompt the user for number
+	Given the application is running
+	When I type "Name"
+	When I type "2"
+	Then the output should contain "I refuse to play"	
 	
+Scenario: Prompt the user for number
+	Given the application is running
+	When I type "Name"
+	When I type "3"
+	Then the output should contain "I refuse to play"	
+
+Scenario: Prompt the user for number
+	Given the application is running
+	When I type "Name"
+	When I type "4"
+	Then the output should contain "I refuse to play"		
+
 Scenario: Prompt the user for number
 	Given the application is running
 	When I type "Steven"
