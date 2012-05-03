@@ -1,0 +1,18 @@
+Lab 9
+Arda C. Tugay
+Steven Moyes
+
+Q1:
+[].class => Array
+3 / 2 => 1
+3.0 / 2.0 => 1.5
+[].nil? => false
+def h; "Hello world"; end => nil
+
+Q2: Creating classes and the fact that everything is an object. Because it makes it easier to work with the programming language.
+
+Q3: I believe the advantages of BDD are not worth the drawbacks because BDD requires us to write tests in English and then write test code to interpret the English.
+
+Q4: BDD allows us write code in English so that it is obvious what we are trying to develop. However, this hinders development of tests because we need to define what the English means. 
+
+Q5: Using verbose English makes it easier to understand what a given feature is attempting to do without needing to wade through the Test Case code. The drawback is that the English is undefined, so we need to write code to interpret the english. People who aren't familiar with programming languages can see the scenarios in plain English and see what the code is attempting to complete.
